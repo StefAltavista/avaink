@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+    font-weight: 300;
+}
+body {
+    color: black;
+    margin: 0;
+}
+/* ---------- BANNER ---------- */
+#banner {
+    width: 100vw;
+    height: 150px;
+    padding: 20px;
+}
+#logo {
+    display: flex;
+    flex-direction: row;
+}
+#logoImg {
+    width: 100px;
+    height: auto;
+}
+#navBar {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+}
+
+#navBar {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+#navBar p {
+    justify-self: center;
+    margin: 4px;
+    transition: 1s;
+}
+#navBar p:hover {
+    letter-spacing: 2px;
+    cursor: pointer;
+}
