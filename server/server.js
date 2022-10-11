@@ -67,28 +67,26 @@ app.post("/api/logOut", checkToken, (req, res) => {
 });
 
 //----------- DATABASE REQUESTS--------------\\
-app.get("/api/getData", checkToken, (req, res) => {
+app.get("/api/getData", (req, res) => {
     data = db.getData();
     res.json(data);
 });
 //----------- AWS --------------\\
-app.post("/api/upload", uploader.single("file"), (req, res) => {
+app.post("/api/upload", checkToken, uploader.single("file"), (req, res) => {
     console.log("upload succesfull", req);
 });
 app.get("/api/access", (req, res) => {
     res.json(req.session);
 });
 
-app.set("port", process.env.PORT || 6000);
+app.get("/*", function (req, res) {
+    res.redirect("/");
+});
 
+//-------------
+app.set("port", process.env.PORT || 6000);
 app.listen(app.get("port"), () => {
     console.log("server running on 6000");
-});
-app.get("/*", function (req, res) {
-    console.log("*/: session", req.session);
-    res.redirect("/");
-
-    // res.sendFile(path.join(__dirname, "..", "client", "src", "index.html"));
 });
 
 function checkToken(req, res, next) {

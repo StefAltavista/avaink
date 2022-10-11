@@ -5,7 +5,7 @@ export function setAdminReducer(admin = {}, action) {
     if (action.type == "LOG_OUT") {
         admin = {};
     }
-    console.log("redux = admin:", admin);
+
     return admin;
 }
 

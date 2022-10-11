@@ -15,6 +15,6 @@
     "about": {
         "profilePic": "url",
         "bio": "text",
-        "additionalPhotos": ["url1,url2"]
+        "photos": ["url1,url2"]
     }
 }

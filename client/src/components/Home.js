@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import checkLogIn from "../hooks/checkLogin";
+
 import Dashboard from "./Dashboard";
 import TryOut from "./TryOut";
 import Book from "./Book";
@@ -11,27 +11,24 @@ import Footer from "./Footer";
 import Banner from "./Banner";
 
 export default function Home() {
-    const [selection, setSection] = useState("dashboard");
-    const access = useSelector((state) => state.admin.access);
-
-    checkLogIn();
+    const [selection, setSection] = useState("Dashboard");
 
     const renderSwitch = () => {
         switch (selection) {
-            case "dashboard":
-                return <Dashboard access={access}></Dashboard>;
+            case "Dashboard":
+                return <Dashboard></Dashboard>;
 
-            case "designs":
-                return <Designs access={access}></Designs>;
+            case "Designs":
+                return <Designs></Designs>;
 
-            case "tryOut":
-                return <TryOut access={access}></TryOut>;
+            case "Try out":
+                return <TryOut></TryOut>;
 
-            case "book":
-                return <Book access={access}></Book>;
+            case "Book Appointment":
+                return <Book></Book>;
 
-            case "about":
-                return <About access={access}></About>;
+            case "About":
+                return <About></About>;
         }
     };
 
@@ -41,7 +38,7 @@ export default function Home() {
                 select={(selected) => {
                     setSection(selected);
                 }}
-                access={access}
+                selection={selection}
             ></Banner>
             <div id="homeBody">{renderSwitch()}</div>
             <Footer></Footer>

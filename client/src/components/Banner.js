@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Banner({ select }) {
+export default function Banner({ select, selection }) {
+    const links = ["Designs", "Try out", "Book Appointment", "About"];
+
     return (
         <div id="banner">
             <div
                 id="logo"
                 onClick={() => {
-                    select("dashboard");
+                    select("About");
                 }}
             >
                 <img id="logoImg" src="/imgs/Logo.png" />
@@ -18,34 +20,29 @@ export default function Banner({ select }) {
             </div>
 
             <div id="navBar">
-                <p
-                    onClick={() => {
-                        select("designs");
-                    }}
-                >
-                    Designs
-                </p>
-                <p
-                    onClick={() => {
-                        select("tryOut");
-                    }}
-                >
-                    Try out
-                </p>
-                <p
-                    onClick={() => {
-                        select("book");
-                    }}
-                >
-                    Book Appointment
-                </p>
-                <p
-                    onClick={() => {
-                        select("about");
-                    }}
-                >
-                    About Ava
-                </p>
+                {links.map((x) => {
+                    return (
+                        <>
+                            {x == selection ? (
+                                <p
+                                    onClick={() => {
+                                        select("Dashboard");
+                                    }}
+                                >
+                                    Home
+                                </p>
+                            ) : (
+                                <p
+                                    onClick={() => {
+                                        select(x);
+                                    }}
+                                >
+                                    {x}
+                                </p>
+                            )}
+                        </>
+                    );
+                })}
             </div>
         </div>
     );
