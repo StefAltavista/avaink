@@ -5,6 +5,7 @@
 }
 a {
     text-decoration: none;
+    color: black;
 }
 body {
     color: black;
@@ -13,7 +14,7 @@ body {
 /* ---------- BANNER ---------- */
 #banner {
     width: 100vw;
-    height: 150px;
+    height: 200px;
     padding: 20px;
 }
 #logo {
@@ -44,12 +45,30 @@ body {
     cursor: pointer;
 }
 
+/* --------- homeBody div ----------- */
+#homeBody {
+    padding: 20px;
+    padding-top: 0px;
+}
+
+/* --------- ACCESS PAGE ----------- */
+#accessPage {
+    padding: 20px;
+}
+
+/* --------- FOOTER ----------- */
 #footer {
     position: absolute;
-    width: 100%;
-    height: 25px;
-    display: flex;
-
-    flex-direction: row;
+    width: 100vw;
+    padding: 20px;
     bottom: 0px;
+}
+#footer div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }

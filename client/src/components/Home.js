@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
+import checkLogIn from "../hooks/checkLogin";
 import Dashboard from "./Dashboard";
 import TryOut from "./TryOut";
 import Book from "./Book";
@@ -11,29 +12,28 @@ import Banner from "./Banner";
 
 export default function Home() {
     const [selection, setSection] = useState("dashboard");
-    const [Elm, setElm] = useState(Dashboard);
     const access = useSelector((state) => state.admin.access);
-    console.log("access:", access);
 
-    useEffect(() => {
+    checkLogIn();
+
+    const renderSwitch = () => {
         switch (selection) {
             case "dashboard":
-                setElm(Dashboard);
-                break;
+                return <Dashboard access={access}></Dashboard>;
+
             case "designs":
-                setElm(Designs);
-                break;
+                return <Designs access={access}></Designs>;
+
             case "tryOut":
-                setElm(TryOut);
-                break;
+                return <TryOut access={access}></TryOut>;
+
             case "book":
-                setElm(Book);
-                break;
+                return <Book access={access}></Book>;
+
             case "about":
-                setElm(About);
-                break;
+                return <About access={access}></About>;
         }
-    }, [, selection]);
+    };
 
     return (
         <>
@@ -41,8 +41,9 @@ export default function Home() {
                 select={(selected) => {
                     setSection(selected);
                 }}
+                access={access}
             ></Banner>
-            {Elm}
+            <div id="homeBody">{renderSwitch()}</div>
             <Footer></Footer>
         </>
     );

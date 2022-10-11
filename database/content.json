@@ -1,0 +1,18 @@
+{
+    "Designs": [
+        { "imgUrl": "url", "title": "text" },
+        { "imgUrl": "url", "title": "text" },
+        { "imgUrl": "url", "title": "text" }
+    ],
+    "dashboard": [
+        { "imgUrls": ["url1", "url2"], "post": "text" },
+        { "imgUrls": ["url1", "url2"], "post": "text" },
+        { "imgUrls": ["url1", "url2"], "post": "text" },
+        { "imgUrls": ["url1", "url2"], "post": "text" }
+    ],
+    "about": {
+        "profilePic": "url",
+        "bio": "text",
+        "additionalPhotos": ["url1,url2"]
+    }
+}
