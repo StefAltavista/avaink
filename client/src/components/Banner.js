@@ -22,7 +22,7 @@ export default function Banner({ select, selection }) {
             <div id="navBar">
                 {links.map((x) => {
                     return (
-                        <>
+                        <div key={x}>
                             {x == selection ? (
                                 <p
                                     onClick={() => {
@@ -40,7 +40,7 @@ export default function Banner({ select, selection }) {
                                     {x}
                                 </p>
                             )}
-                        </>
+                        </div>
                     );
                 })}
             </div>

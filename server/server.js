@@ -1,4 +1,5 @@
 const path = require("path");
+const compression = require("compression");
 
 //Express Setup
 const express = require("express");
@@ -6,7 +7,10 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, "..", "client")));
 app.use(express.static(path.join(__dirname, "..", "dist")));
+
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(compression());
 
 let secret;
 if (process.env.NODE_ENV == "production") {
@@ -36,7 +40,7 @@ const storage = multer.diskStorage({
     },
     filename: (req, file, callback) => {
         uidSafe(24).then((randomId) => {
-            const fileName = `${randomId}${path.extname(file.originalname)}`;
+            const fileName = `${randomId}.png`;
             callback(null, fileName);
         });
     },
@@ -72,8 +76,8 @@ app.get("/api/getData", (req, res) => {
     res.json(data);
 });
 //----------- AWS --------------\\
-app.post("/api/upload", checkToken, uploader.single("file"), (req, res) => {
-    console.log("upload succesfull", req);
+app.post("/api/uploadImage", uploader.single("file"), (req, res) => {
+    console.log("after upload:", req);
 });
 app.get("/api/access", (req, res) => {
     res.json(req.session);
@@ -91,7 +95,7 @@ app.listen(app.get("port"), () => {
 
 function checkToken(req, res, next) {
     const { token } = req.body;
-    // console.log("check:", token, "with", req.session);
+    console.log("check:", token, "with", req.session);
     if (token == req.session.token) {
         console.log("Correct Token");
         next();

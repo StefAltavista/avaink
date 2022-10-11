@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import AddDesign from "./addDesign";
 
 export default function Designs() {
     const access = useSelector((state) => state.admin.access);
     const token = useSelector((state) => state.admin.token);
+    const [addDesign, setAddDesign] = useState(false);
 
     const { designs } = useSelector((state) => state.content);
 
     return (
         <div>
+            {addDesign && <AddDesign></AddDesign>}
             {access ? (
                 <div id="editDashboard">
-                    <button
-                        onClick={() => console.log("open add design modal")}
-                    >
+                    <button onClick={() => setAddDesign(!addDesign)}>
                         Add Design
                     </button>
                 </div>
