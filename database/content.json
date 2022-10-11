@@ -1,10 +1,12 @@
 {
-    "Designs": [
+    "designs": [
+        { "imgUrl": "newUrl", "title": "REMOVE THIS" },
+        { "imgUrl": "newUrl", "title": "newTitle" },
         { "imgUrl": "url", "title": "text" },
         { "imgUrl": "url", "title": "text" },
         { "imgUrl": "url", "title": "text" }
     ],
-    "dashboard": [
+    "posts": [
         { "imgUrls": ["url1", "url2"], "post": "text" },
         { "imgUrls": ["url1", "url2"], "post": "text" },
         { "imgUrls": ["url1", "url2"], "post": "text" },

@@ -15,6 +15,8 @@ if (process.env.NODE_ENV == "production") {
     secret = require("../config.json");
 }
 
+const db = require("../database/methods");
+
 //Cookies
 let cookieSession = require("cookie-session");
 const cookieSessionMiddleware = cookieSession({
@@ -28,7 +30,6 @@ app.use(cookieSessionMiddleware);
 //Multer Setup
 const multer = require("multer");
 const uidSafe = require("uid-safe");
-const { nextTick } = require("process");
 const storage = multer.diskStorage({
     destination: (req, file, callback) => {
         callback(null, path.join(__dirname, "uploads"));
@@ -42,9 +43,7 @@ const storage = multer.diskStorage({
 });
 const uploader = multer({ storage });
 
-//server
-
-let errorNum = 0; //number of attemps
+//----------- Log in/out requests--------------\\
 app.post("/api/logIn", (req, res) => {
     const { password } = req.body;
 
@@ -66,6 +65,13 @@ app.post("/api/logOut", checkToken, (req, res) => {
     req.session = null;
     res.json({ token: null, access: null });
 });
+
+//----------- DATABASE REQUESTS--------------\\
+app.get("/api/getData", checkToken, (req, res) => {
+    data = db.getData();
+    res.json(data);
+});
+//----------- AWS --------------\\
 app.post("/api/upload", uploader.single("file"), (req, res) => {
     console.log("upload succesfull", req);
 });
@@ -87,7 +93,7 @@ app.get("/*", function (req, res) {
 
 function checkToken(req, res, next) {
     const { token } = req.body;
-    console.log("check:", token, "with", req.session);
+    // console.log("check:", token, "with", req.session);
     if (token == req.session.token) {
         console.log("Correct Token");
         next();
