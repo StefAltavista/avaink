@@ -5,7 +5,9 @@ export default function readImage(img) {
 
         try {
             reader.onloadend = () => {
-                res(reader.result);
+                let preview = reader.result;
+                // ScaleImage(preview);
+                res(preview);
             };
         } catch {
             (e) => {

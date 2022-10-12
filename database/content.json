@@ -1,1 +1,5 @@
-{"designs":[{"title":"Lineups","description":"","imgUrls":["https://avainkbucket.s3.eu-central-1.amazonaws.com/uDp48LgUjAmJQCiuL5ofryIwMWl7VwvQ.png","https://avainkbucket.s3.eu-central-1.amazonaws.com/JWaam4Kg9133d14Tn3KPRA2kAdilYqCY.png"]},{"title":"","description":"text","imgUrls":["url1","url2"]},{"title":"text","description":"text","imgUrls":["url1","url2"]},{"title":"text","description":"text","imgUrls":["url1","url2"]}],"posts":[{"title":"text","description":"text","imgUrls":["url1","url2"]},{"title":"text","description":"text","imgUrls":["url1","url2"]},{"title":"text","description":"text","imgUrls":["url1","url2"]}],"about":{"profilePic":"url","bio":"text","photos":["url1,url2"]}}
+{
+    "designs": [],
+    "posts": [],
+    "about": { "profilePic": "url", "bio": "text", "photos": ["url1,url2"] }
+}

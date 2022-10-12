@@ -85,7 +85,7 @@ app.post("/api/addImages", checkToken, (req, res) => {
     const { source, data } = req.body;
     let method = `add${source}`;
     let success = db[method](data);
-    res.json({ success });
+    res.json(success);
 });
 
 //----------- upload to AWS --------------\\

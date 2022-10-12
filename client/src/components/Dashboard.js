@@ -16,7 +16,12 @@ export default function Dashboard() {
                     </button>
                 </div>
             ) : null}
-            {addPost && <AddModal source={"Post"}></AddModal>}
+            {addPost && (
+                <AddModal
+                    source={"Post"}
+                    closeModal={() => setAddPost(!addPost)}
+                ></AddModal>
+            )}
             {posts
                 ? posts.map((post, idx) => {
                       return (

@@ -18,7 +18,12 @@ export default function Designs() {
                     </button>
                 </div>
             ) : null}
-            {addDesign && <AddModal source={"Design"}></AddModal>}
+            {addDesign && (
+                <AddModal
+                    source={"Design"}
+                    closeModal={() => setAddDesign(!addDesign)}
+                ></AddModal>
+            )}
             {designs
                 ? designs.map((design, idx) => {
                       return (
