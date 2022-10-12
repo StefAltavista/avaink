@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import AddDesign from "./addDesign";
+import AddModal from "./addModal";
 
 export default function Designs() {
     const access = useSelector((state) => state.admin.access);
-    const token = useSelector((state) => state.admin.token);
-    const [addDesign, setAddDesign] = useState(false);
-
     const { designs } = useSelector((state) => state.content);
+    const [addDesign, setAddDesign] = useState(false);
 
     return (
         <div>
-            {addDesign && <AddDesign></AddDesign>}
+            <h1>Designs</h1>
+
             {access ? (
                 <div id="editDashboard">
                     <button onClick={() => setAddDesign(!addDesign)}>
@@ -19,6 +18,7 @@ export default function Designs() {
                     </button>
                 </div>
             ) : null}
+            {addDesign && <AddModal source={"Design"}></AddModal>}
             {designs
                 ? designs.map((design, idx) => {
                       return (
@@ -29,9 +29,15 @@ export default function Designs() {
                                   console.log("open design Modal, index", idx)
                               }
                           >
-                              {" "}
-                              <p>design text: {design.title}</p>
-                              <img src={design.imgUrl} id="designImg" />
+                              {design.title && <p>Title: {design.title}</p>}
+                              {design.description && (
+                                  <p>Description: {design.description}</p>
+                              )}
+                              <>
+                                  {design.imgUrls.map((url) => (
+                                      <img src={url} id="designImg" key={url} />
+                                  ))}
+                              </>
                           </div>
                       );
                   })

@@ -16,11 +16,19 @@ export default function Access() {
     checkLogIn();
 
     const log = (body, type) => {
-        fetch(`./api/log${type}`, {
-            method: "POST",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify(body),
-        })
+        let options =
+            type == "In"
+                ? {
+                      method: "POST",
+                      headers: { "content-type": "application/json" },
+                      body: JSON.stringify(body),
+                  }
+                : {
+                      method: "POST",
+                      headers: { authorization: [body.token] },
+                  };
+
+        fetch(`./api/log${type}`, options)
             .then((res) => res.json())
             .then((response) => {
                 let { token, access } = response;

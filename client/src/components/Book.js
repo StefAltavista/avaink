@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Book() {
-    return <p>Book</p>;
+    return <h1>Book an appointment (under construction)</h1>;
 }

@@ -32,6 +32,7 @@ const cookieSessionMiddleware = cookieSession({
 app.use(cookieSessionMiddleware);
 
 //Multer Setup
+const { uploadAWS } = require("./s3");
 const multer = require("multer");
 const uidSafe = require("uid-safe");
 const storage = multer.diskStorage({
@@ -48,6 +49,10 @@ const storage = multer.diskStorage({
 const uploader = multer({ storage });
 
 //----------- Log in/out requests--------------\\
+app.get("/api/access", (req, res) => {
+    res.json(req.session);
+});
+
 app.post("/api/logIn", (req, res) => {
     const { password } = req.body;
 
@@ -75,13 +80,26 @@ app.get("/api/getData", (req, res) => {
     data = db.getData();
     res.json(data);
 });
-//----------- AWS --------------\\
-app.post("/api/uploadImage", uploader.single("file"), (req, res) => {
-    console.log("after upload:", req);
+
+app.post("/api/addImages", checkToken, (req, res) => {
+    const { source, data } = req.body;
+    let method = `add${source}`;
+    let success = db[method](data);
+    res.json({ success });
 });
-app.get("/api/access", (req, res) => {
-    res.json(req.session);
-});
+
+//----------- upload to AWS --------------\\
+
+app.post(
+    "/api/uploadImage",
+    checkToken,
+    uploader.single("file"),
+    uploadAWS,
+    (req, res) => {
+        const url = `https://avainkbucket.s3.eu-central-1.amazonaws.com/${req.file.filename}`;
+        res.json(url);
+    }
+);
 
 app.get("/*", function (req, res) {
     res.redirect("/");
@@ -94,9 +112,10 @@ app.listen(app.get("port"), () => {
 });
 
 function checkToken(req, res, next) {
-    const { token } = req.body;
-    console.log("check:", token, "with", req.session);
-    if (token == req.session.token) {
+    console.log(req.headers);
+    const { authorization } = req.headers;
+    console.log("check:", authorization, "with", req.session);
+    if (authorization == req.session.token) {
         console.log("Correct Token");
         next();
     } else {

@@ -9,8 +9,7 @@ export default function useLog(body, type) {
     return new Promise(() => {
         fetch(`./api/log${type}`, {
             method: "POST",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify(body),
+            headers: { authorization: body.token },
         })
             .then((res) => res.json())
             .then((response) => {

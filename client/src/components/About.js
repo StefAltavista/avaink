@@ -9,6 +9,7 @@ export default function About() {
 
     return (
         <div>
+            <h1>About AVA </h1>
             {access ? (
                 <div id="editDashboard">
                     <button

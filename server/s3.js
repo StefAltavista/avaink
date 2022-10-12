@@ -12,7 +12,7 @@ const s3 = new aws.S3({
     secretAccessKey: secret.AWS_SECRET,
 });
 
-module.exports.upload = (req, res, next) => {
+module.exports.uploadAWS = (req, res, next) => {
     if (!req.file) {
         console.log("User didn't send any file");
         return res.sendStatus(500);
@@ -21,11 +21,11 @@ module.exports.upload = (req, res, next) => {
     console.log("FILE:\n", filename, mimetype, size, path);
     s3.putObject({
         Bucket: "avainkbucket",
-        ACL: "public-read", // makes sure what we upload can be access online
-        Key: filename, // is responsible for the name of the object created in the bucket
-        Body: fs.createReadStream(path), // stream to where the file is that we like to upload
+        // ACL: "public-read", // makes sure what we upload can be access online
+        Key: filename,
+        Body: fs.createReadStream(path),
         ContentType: mimetype, // ensures that under the hood content type headers can be set
-        ContentLength: size, // and most likely also content length headers
+        ContentLength: size, // and content length headers
     })
         .promise()
         .then(() => {

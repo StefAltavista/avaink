@@ -1,17 +1,22 @@
-export default async function uploadImmage(file, token) {
-    return new Promise((res, rej) => {
-        let formData = new FormData();
-        formData.append("file", file);
+export default async function uploadImage(files, token) {
+    if (!files[0]) new Error("no file added");
+    return Promise.all(
+        files.map((file) => {
+            return new Promise((res, rej) => {
+                let formData = new FormData();
+                formData.append("file", file);
 
-        fetch("/api/uploadImage", {
-            method: "POST",
-            // headers: { "content-type": "application/json" },
-            // body: JSON.stringify({ token, file: formData }),
-            body: formData,
-        })
-            .then((res) => res.json())
-            .then((response) => {
-                console.log("image response:", response);
+                fetch("/api/uploadImage", {
+                    method: "POST",
+                    headers: { authorization: token },
+                    body: formData,
+                })
+                    .then((res) => res.json())
+                    .then((response) => {
+                        res(response);
+                    })
+                    .catch((e) => rej(e));
             });
-    });
+        })
+    );
 }

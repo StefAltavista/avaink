@@ -1,21 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import AddModal from "./addModal";
 
 export default function Dashboard() {
     const access = useSelector((state) => state.admin.access);
-    const token = useSelector((state) => state.admin.token);
-
     const { posts } = useSelector((state) => state.content);
+    const [addPost, setAddPost] = useState(false);
 
     return (
         <div>
             {access ? (
                 <div id="editDashboard">
-                    <button onClick={() => console.log("open add post modal")}>
+                    <button onClick={() => setAddPost(!addPost)}>
                         Add Post
                     </button>
                 </div>
             ) : null}
+            {addPost && <AddModal source={"Post"}></AddModal>}
             {posts
                 ? posts.map((post, idx) => {
                       return (
@@ -26,11 +27,15 @@ export default function Dashboard() {
                                   console.log("open Post Modal, index", idx)
                               }
                           >
-                              {" "}
-                              <p>post text: {post.post}</p>
-                              {post.imgUrls.map((url) => (
-                                  <img src={url} id="postImg" key={url} />
-                              ))}
+                              {post.title && <p>Title: {post.title}</p>}
+                              {post.description && (
+                                  <p>Description: {post.description}</p>
+                              )}
+                              <>
+                                  {post.imgUrls.map((url) => (
+                                      <img src={url} id="postImg" key={url} />
+                                  ))}
+                              </>
                           </div>
                       );
                   })

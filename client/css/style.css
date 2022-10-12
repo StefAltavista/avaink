@@ -53,15 +53,19 @@ body {
 }
 
 /* --------- add design modal  ----------- */
-#addDesignModal {
+#addModal {
     position: absolute;
     background-color: rgb(234, 234, 234);
     border: 1px solid black;
     padding: 10px;
 }
-#addDesignPreview {
+#imagesPreview {
+    display: flex;
+    flex-direction: row;
+}
+#addImagePreview {
     width: 100px;
-    height: auto;
+    height: 100px;
     border: 1px solid white;
 }
 
