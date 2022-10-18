@@ -114,9 +114,65 @@ body {
     padding: 20px;
 }
 
+/* --------- DASHBOARD ----------- */
+#post {
+    display: flex;
+    /* flex-direction: row-reverse; */
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+}
+#postText {
+    width: 30%;
+    margin-right: 20px;
+}
+#postTitle {
+    font-size: 20px;
+}
+#postImgGallery {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    height: 500px;
+    overflow: scroll;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(200px);
+    scroll-snap-type: x mandatory;
+}
+#imgContainer {
+    width: 500px;
+    height: 500px;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#postImg {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+}
+#scrollDots {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.selected {
+    background-color: black;
+}
+
+#dot {
+    width: 10px;
+    height: 10px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    margin: 5px;
+}
+.selected {
+    background-color: gray;
+}
 /* --------- FOOTER ----------- */
 #footer {
-    position: absolute;
     width: 100vw;
     padding: 20px;
     bottom: 0px;

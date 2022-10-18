@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, createRef } from "react";
 import { useSelector } from "react-redux";
 import AddModal from "./addModal";
+import DashboardGallery from "./DashboardGallery";
 
 export default function Dashboard() {
     const access = useSelector((state) => state.admin.access);
@@ -23,24 +24,29 @@ export default function Dashboard() {
                 ></AddModal>
             )}
             {posts
-                ? posts.map((post, idx) => {
+                ? posts.map((post, postIdx) => {
                       return (
                           <div
                               id="post"
-                              key={idx}
+                              key={postIdx}
                               onClick={() =>
-                                  console.log("open Post Modal, index", idx)
+                                  console.log("open Post Modal, index", postIdx)
                               }
                           >
-                              {post.title && <p>Title: {post.title}</p>}
-                              {post.description && (
-                                  <p>Description: {post.description}</p>
-                              )}
-                              <>
-                                  {post.imgUrls.map((url) => (
-                                      <img src={url} id="postImg" key={url} />
-                                  ))}
-                              </>
+                              <div id="postText">
+                                  {post.title && (
+                                      <p id="postTitle">{post.title}</p>
+                                  )}
+                                  {post.description && (
+                                      <p id="postDescription">
+                                          {post.description}
+                                      </p>
+                                  )}
+                              </div>
+                              <DashboardGallery
+                                  images={post.imgUrls}
+                                  postIdx={postIdx}
+                              ></DashboardGallery>
                           </div>
                       );
                   })
