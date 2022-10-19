@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import React, { useState } from "react";
 
 import Dashboard from "./Dashboard";
 import TryOut from "./TryOut";
@@ -11,7 +10,7 @@ import Footer from "./Footer";
 import Banner from "./Banner";
 
 export default function Home() {
-    const [selection, setSection] = useState("Dashboard");
+    const [selection, setSection] = useState("Try out");
 
     const renderSwitch = () => {
         switch (selection) {

@@ -171,6 +171,36 @@ body {
 .selected {
     background-color: gray;
 }
+/* ---------- Try Out ---------- */
+#TryOut {
+    display: flex;
+}
+#chooseDesign {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+#designPreview {
+    max-width: 100px;
+    height: fit-content;
+}
+.selectedDesign {
+    border: 3px solid black;
+    padding: 3px;
+    margin: 5px;
+}
+.notSelectedDesign {
+    padding: 6px;
+    margin: 5px;
+}
+
+#whiteBoard {
+    width: 414px;
+    height: 514px;
+    padding: 5px;
+    border: 2px solid black;
+}
+
 /* --------- FOOTER ----------- */
 #footer {
     width: 100vw;

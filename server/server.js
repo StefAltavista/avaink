@@ -48,7 +48,7 @@ const storage = multer.diskStorage({
 });
 const uploader = multer({ storage });
 
-//----------- Log in/out requests--------------\\
+//----------- LOG IN/OUT --------------\\
 app.get("/api/access", (req, res) => {
     res.json(req.session);
 });
@@ -88,7 +88,7 @@ app.post("/api/addImages", checkToken, (req, res) => {
     res.json(success);
 });
 
-//----------- upload to AWS --------------\\
+//----------- UPLOAD --------------\\
 
 app.post(
     "/api/uploadImage",
@@ -101,11 +101,12 @@ app.post(
     }
 );
 
+//-------------
+
 app.get("/*", function (req, res) {
     res.redirect("/");
 });
 
-//-------------
 app.set("port", process.env.PORT || 6000);
 app.listen(app.get("port"), () => {
     console.log("server running on 6000");
