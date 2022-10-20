@@ -4,6 +4,7 @@ export default function DashboardGallery({ images, postIdx }) {
     let gallery = [];
     let dot = [];
     dot[postIdx] = [];
+
     const getScroll = (scroll, i) => {
         let postView = Math.floor(scroll / 500);
         dot[i].map((x, idx) => {

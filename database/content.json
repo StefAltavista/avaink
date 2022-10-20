@@ -1,1 +1,48 @@
-{"designs":[{"title":"Lorm","description":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.","imgUrls":["https://avainkbucket.s3.eu-central-1.amazonaws.com/W55EtG3PwSr22vj7tji2zV9iTPBvHwil.png","https://avainkbucket.s3.eu-central-1.amazonaws.com/KbqsgCIMYDbrOCnUWYHaUhHWmZFfUL4Q.png"]}],"posts":[{"title":"LOREM IPSUM","description":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.","imgUrls":["https://avainkbucket.s3.eu-central-1.amazonaws.com/3E1sJGdNDPbpyAd9ge3cuM_PjkFSDisX.png","https://avainkbucket.s3.eu-central-1.amazonaws.com/Ay8_ViVY_wXhjBv40yKtTfbM33JsfThq.png","https://avainkbucket.s3.eu-central-1.amazonaws.com/TSyTzNOHhPMjdjS7D80eOenlLvQqmyLL.png"]},{"title":"Scroll Check","description":"Checking the scrollllssslslslsl","imgUrls":["https://avainkbucket.s3.eu-central-1.amazonaws.com/GlzruH-N9KpXCxWI2UVhrvdZHUZbZwxC.png","https://avainkbucket.s3.eu-central-1.amazonaws.com/ZqxvHtONYLiQzu5L736XSFK0Ne_ZtX65.png","https://avainkbucket.s3.eu-central-1.amazonaws.com/jkWLcL3D6gQlNaRkfXbhFBmTDZYlbhsu.png","https://avainkbucket.s3.eu-central-1.amazonaws.com/f9u3-3pRMp4_OsF4dWzGsKS93ZsnQf1R.png"]},{"title":"My glitches - First Post","description":"This is the first post that i leave here for a bit, to tailor some css around it and in order to create the api's related to all the posts (edit, delete pin to top)\n","imgUrls":["https://avainkbucket.s3.eu-central-1.amazonaws.com/oFbZTwFn6EbK2oDDeGLtxyREIuDydHlS.png","https://avainkbucket.s3.eu-central-1.amazonaws.com/902w7JeNDmGLEHPjYknunSxahI7gwMOg.png"]}],"about":{"profilePic":"url","bio":"text","photos":["url1,url2"]}}
+{
+    "designs": [
+        {
+            "title": "",
+            "description": "",
+            "imgUrls": [
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/-xV_lJwej7m6FInRdlH3QUf-qyvyNl9s.png"
+            ]
+        },
+        {
+            "title": "Lorm",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "imgUrls": [
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/KbqsgCIMYDbrOCnUWYHaUhHWmZFfUL4Q.png"
+            ]
+        }
+    ],
+    "posts": [
+        {
+            "title": "LOREM IPSUM",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "imgUrls": [
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/3E1sJGdNDPbpyAd9ge3cuM_PjkFSDisX.png",
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/Ay8_ViVY_wXhjBv40yKtTfbM33JsfThq.png",
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/TSyTzNOHhPMjdjS7D80eOenlLvQqmyLL.png"
+            ]
+        },
+        {
+            "title": "Scroll Check",
+            "description": "Checking the scrollllssslslslsl",
+            "imgUrls": [
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/GlzruH-N9KpXCxWI2UVhrvdZHUZbZwxC.png",
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/ZqxvHtONYLiQzu5L736XSFK0Ne_ZtX65.png",
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/jkWLcL3D6gQlNaRkfXbhFBmTDZYlbhsu.png",
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/f9u3-3pRMp4_OsF4dWzGsKS93ZsnQf1R.png"
+            ]
+        },
+        {
+            "title": "My glitches - First Post",
+            "description": "This is the first post that i leave here for a bit, to tailor some css around it and in order to create the api's related to all the posts (edit, delete pin to top)\n",
+            "imgUrls": [
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/oFbZTwFn6EbK2oDDeGLtxyREIuDydHlS.png",
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/902w7JeNDmGLEHPjYknunSxahI7gwMOg.png"
+            ]
+        }
+    ],
+    "about": { "profilePic": "url", "bio": "text", "photos": ["url1,url2"] }
+}

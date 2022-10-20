@@ -195,9 +195,10 @@ body {
 }
 
 #whiteBoard {
-    width: 414px;
-    height: 514px;
-    padding: 5px;
+    width: 400px;
+    height: 500px;
+    overflow: scroll;
+
     border: 2px solid black;
 }
 
