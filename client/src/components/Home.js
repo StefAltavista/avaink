@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { ChartProvider } from "./ChartContext";
 
+import Banner from "./Banner";
 import Dashboard from "./Dashboard";
 import TryOut from "./TryOut";
 import Book from "./Book";
@@ -7,8 +9,6 @@ import Shop from "./Shop";
 import About from "./About";
 import Designs from "./Designs";
 import Footer from "./Footer";
-
-import Banner from "./Banner";
 
 export default function Home() {
     const [selection, setSection] = useState("Dashboard");
@@ -27,7 +27,7 @@ export default function Home() {
             case "Book Appointment":
                 return <Book></Book>;
             case "Shop":
-                return <Shop></Shop>;
+                return <Shop />;
             case "About":
                 return <About></About>;
         }
@@ -41,7 +41,10 @@ export default function Home() {
                 }}
                 selection={selection}
             ></Banner>
-            <div id="homeBody">{renderSwitch()}</div>
+            <ChartProvider>
+                <div id="homeBody">{renderSwitch()}</div>{" "}
+            </ChartProvider>
+
             <Footer></Footer>
         </>
     );

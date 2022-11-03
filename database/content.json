@@ -59,6 +59,66 @@
             ]
         }
     ],
+    "merchandise": [
+        {
+            "title": "",
+            "description": "",
+            "imgUrls": [
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/hk7VxItykigKYsmKGK23TrQ5C2jKBoKu.png",
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/Zy3T42I06TWk-9sVBz5-QjFFDQ6VU5XB.png"
+            ]
+        },
+        {
+            "title": "",
+            "description": "",
+            "imgUrls": [
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/KAFl60j8FLaQ9dk75hIdkbzWQ_AmbN3S.png"
+            ]
+        },
+        {
+            "title": "",
+            "description": "",
+            "imgUrls": [
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/Xff4FN80VqH7GgU-JjU_yqyUQcVzbE2_.png"
+            ]
+        },
+        {
+            "title": "",
+            "description": "",
+            "imgUrls": [
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/OmNcyqC7gxaSM5pG0jUN14-RU78Obe17.png",
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/T32nE3tw2BVabcSfUYmoky_AQZtKUwLj.png"
+            ]
+        },
+        {
+            "title": "",
+            "description": "",
+            "imgUrls": [
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/6YJS7Tl4gINiizRfPuQQmALcJeeIGGZE.png"
+            ]
+        },
+        {
+            "title": "",
+            "description": "",
+            "imgUrls": [
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/xWhORiJ2PlmS1_Bz0SGoBXswozj1nQ5m.png"
+            ]
+        },
+        {
+            "title": "",
+            "description": "",
+            "imgUrls": [
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/-xV_lJwej7m6FInRdlH3QUf-qyvyNl9s.png"
+            ]
+        },
+        {
+            "title": "Lorm",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "imgUrls": [
+                "https://avainkbucket.s3.eu-central-1.amazonaws.com/KbqsgCIMYDbrOCnUWYHaUhHWmZFfUL4Q.png"
+            ]
+        }
+    ],
     "posts": [
         {
             "title": "Stick & Poke",
