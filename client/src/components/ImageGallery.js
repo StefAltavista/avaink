@@ -1,6 +1,6 @@
 import React, { createRef } from "react";
 
-export default function DashboardGallery({ images, postIdx }) {
+export default function ImageGallery({ images, postIdx }) {
     let gallery = [];
     let dot = [];
     dot[postIdx] = [];
@@ -32,7 +32,7 @@ export default function DashboardGallery({ images, postIdx }) {
             </div>
             <div id="scrollDots">
                 {images.map((url, dotIdx) => {
-                    return (
+                    return images.length == 1 ? null : (
                         <div
                             className={dotIdx == 0 ? "selected" : "notSelected"}
                             id="dot"

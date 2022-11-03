@@ -29,6 +29,7 @@ export default function WhiteBoard({
             design = p5.loadImage(tattoo, () => {
                 design.resize(400, 0);
             });
+
             body = p5.loadImage(bodyImage, () => {
                 body.resize(800, 0);
             });

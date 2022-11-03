@@ -1,7 +1,7 @@
 import React, { useState, createRef } from "react";
 import { useSelector } from "react-redux";
 import AddModal from "./addModal";
-import DashboardGallery from "./DashboardGallery";
+import ImageGallery from "./ImageGallery";
 
 export default function Dashboard() {
     const access = useSelector((state) => state.admin.access);
@@ -9,7 +9,7 @@ export default function Dashboard() {
     const [addPost, setAddPost] = useState(false);
 
     return (
-        <div>
+        <div id="dashboard">
             {access ? (
                 <div id="editDashboard">
                     <button onClick={() => setAddPost(!addPost)}>
@@ -43,10 +43,10 @@ export default function Dashboard() {
                                       </p>
                                   )}
                               </div>
-                              <DashboardGallery
+                              <ImageGallery
                                   images={post.imgUrls}
                                   postIdx={postIdx}
-                              ></DashboardGallery>
+                              ></ImageGallery>
                           </div>
                       );
                   })

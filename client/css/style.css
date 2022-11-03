@@ -29,7 +29,7 @@ body {
 #navBar {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 #navBar {
@@ -52,7 +52,7 @@ body {
     padding-top: 0px;
 }
 
-/* --------- add design modal  ----------- */
+/* --------- add IMG modal  ----------- */
 
 #modalBack {
     position: absolute;
@@ -115,21 +115,50 @@ body {
 }
 
 /* --------- DASHBOARD ----------- */
-#post {
+
+/* #dashboard {
     display: flex;
-    /* flex-direction: row-reverse; */
+    flex-direction: column;
+} */
+#post:nth-child(even) {
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 30%;
+    flex-direction: row-reverse;
 }
+#post:nth-child(odd) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#post {
+    margin-bottom: 100px;
+}
+
 #postText {
-    width: 30%;
-    margin-right: 20px;
+    width: 50%;
+    margin: 20px;
 }
 #postTitle {
     font-size: 20px;
 }
+#postImages {
+    display: flex;
+    flex-direction: column;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+#postImgGallery::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
 #postImgGallery {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+#postImgGallery {
+    background-color: black;
     display: flex;
     flex-direction: row;
     width: 500px;
@@ -150,7 +179,8 @@ body {
 #postImg {
     width: 500px;
     height: 500px;
-    object-fit: contain;
+    /* object-fit: contain; */
+    object-fit: cover;
 }
 #scrollDots {
     display: flex;
@@ -162,8 +192,8 @@ body {
 }
 
 #dot {
-    width: 10px;
-    height: 10px;
+    width: 7px;
+    height: 7px;
     border: 1px solid gray;
     border-radius: 50%;
     margin: 5px;
@@ -171,6 +201,27 @@ body {
 .selected {
     background-color: gray;
 }
+/* ---------- Designs ---------- */
+
+#designs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#design {
+    display: flex;
+}
+#designImg:nth-child(odd) {
+    margin: 20px;
+    width: 180px;
+    height: fit-content;
+}
+#design {
+    margin: 20px;
+    /* width: 180px; */
+    height: fit-content;
+}
+
 /* ---------- Try Out ---------- */
 #TryOut {
     display: flex;

@@ -15,6 +15,24 @@ export default function TryOut() {
         setSelectedBDY("/imgs/female.png");
     }, [designs]);
 
+    const getImage = (url) => {
+        console.log("fetching", url);
+        try {
+            fetch(url)
+                .then((response) => {
+                    console.log("aws Response:", response);
+                    return response.blob();
+                })
+                .then((i) => {
+                    console.log(i);
+                    return URL.createObjectURL(i);
+                })
+                .then((img) => setSelectedDSG(img));
+        } catch (e) {
+            console.log("error", e);
+        }
+    };
+
     return (
         <div id="TryOut">
             <div id="editor">
@@ -74,7 +92,7 @@ export default function TryOut() {
                                     className={className}
                                     key={idx}
                                     onClick={() => {
-                                        setSelectedDSG(url);
+                                        getImage(url);
                                     }}
                                 ></img>
                             );

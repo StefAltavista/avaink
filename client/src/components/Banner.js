@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Banner({ select, selection }) {
-    const links = ["Designs", "Try out", "Book Appointment", "About"];
+    const links = ["Designs", "Try out", "Book Appointment", "Shop", "About"];
 
     return (
         <div id="banner">
