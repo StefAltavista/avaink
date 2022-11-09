@@ -279,6 +279,11 @@ body {
     border: 2px solid black;
 }
 
+/* --------- Calendar ----------- */
+
+#calendar {
+    width: 460px;
+}
 /* --------- FOOTER ----------- */
 #footer {
     width: 100vw;

@@ -161,5 +161,21 @@
         "profilePic": "url",
         "bio": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         "photos": ["url1,url2"]
-    }
+    },
+    "calendar": [
+        {
+            "id": "Available",
+            "date": "2022-11-14",
+            "backgroundColor": "LightGreen",
+            "display": "background",
+            "selectable": true
+        },
+        {
+            "id": "Not Available",
+            "date": "2022-11-13",
+            "backgroundColor": "Red",
+            "display": "background",
+            "selectable": false
+        }
+    ]
 }

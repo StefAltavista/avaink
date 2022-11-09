@@ -11,6 +11,10 @@
     "author": "stef altavista",
     "license": "ISC",
     "dependencies": {
+        "@fullcalendar/core": "^5.11.3",
+        "@fullcalendar/daygrid": "^5.11.3",
+        "@fullcalendar/interaction": "^5.11.3",
+        "@fullcalendar/react": "^5.11.2",
         "@redux-devtools/extension": "^3.2.3",
         "aws-sdk": "^2.1231.0",
         "compression": "^1.7.4",

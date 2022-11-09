@@ -108,6 +108,7 @@ app.get("/*", function (req, res) {
 });
 
 app.set("port", process.env.PORT || 6000);
+
 app.listen(app.get("port"), () => {
     console.log("server running on 6000");
 });
