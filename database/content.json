@@ -165,7 +165,8 @@
     "calendar": [
         {
             "id": "Available",
-            "date": "2022-11-14",
+            "start": "2022-11-14",
+            "end": "2022-11-14",
             "backgroundColor": "LightGreen",
             "display": "background",
             "selectable": true
